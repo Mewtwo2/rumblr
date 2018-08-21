@@ -1,5 +1,15 @@
-<% if session[:user] != nil %>
-  <h1><%= session[:user][:first_name] + " " + session[:user][:last_name] %></h1>
-<% else %>
-  <h1><%= "Please Log In" %></h1>
-<% end %>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <% if session[:user] != nil %>
+      <h1><%= session[:user][:first_name] + " " + session[:user][:last_name] %></h1>
+      <a href="/logout">Logout</a>
+    <% else %>
+      <h1><%= "Please Log In" %></h1>
+    <% end %>
+  </body>
+</html>
