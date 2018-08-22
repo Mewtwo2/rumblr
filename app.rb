@@ -54,4 +54,18 @@ get "/logout" do
   redirect "/"
 end
 
+get "/createpost" do
+  erb :create_post
+end
+
+post "/createpost" do
+  post = Post.new(
+    title: params[:title],
+    text_content: params[:content],
+    user_id: session[:user][:id]
+  )
+  post.save
+  redirect "/"
+end
+
 require "./models"
