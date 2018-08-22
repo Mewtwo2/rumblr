@@ -1,0 +1,20 @@
+#screen{
+  background-image: url('https://i.redd.it/9d9w6pkirihz.jpg');
+  background-size: 100%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+#post-grid{
+  display: grid;
+  grid-template:40vh 40vh 40vh 40vh 40vh/ 32vw 32vw 32vw;
+  text-align: center;
+  grid-gap:1vw;
+}
+
+.grid-cell{
+  background-color: white;
+  border-radius: 4px;
+  border:2px solid black;
+  opacity: 0.8;
+}
