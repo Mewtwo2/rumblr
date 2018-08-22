@@ -59,13 +59,21 @@ get "/createpost" do
 end
 
 post "/createpost" do
+  @title = params[:title]
+
   post = Post.new(
     title: params[:title],
     text_content: params[:content],
     user_id: session[:user][:id]
   )
   post.save
-  redirect "/"
+  session[:post] = post
+  redirect "/sessionposts"
+end
+
+get "/sessionposts" do
+  @title = session[:post][:title]
+  erb :logged_user_posts
 end
 
 require "./models"

@@ -14,9 +14,15 @@
       </p>
     </div>
 
+    <% if session[:user] == nil %>
     <div id="account_buttons">
       <a href="/signup">Sign Up</a>
       <a href="/login">Log In</a>
     </div>
+    <% else %>
+    <div id="account_buttons">
+      <a href="/account">My Account</a>
+    </div>
+    <% end %>
   </body>
 </html>
