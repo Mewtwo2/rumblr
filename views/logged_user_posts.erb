@@ -5,6 +5,10 @@
     <title>Posts</title>
   </head>
   <body>
-    <h1><%= @title %></h1>
+    <% counter = @posts.length - 1 %>
+    <% 20.times do %>
+      <p><%= @posts[counter][:title] %></p>
+      <% counter -= 1 %>
+    <% end %>
   </body>
 </html>

@@ -59,8 +59,6 @@ get "/createpost" do
 end
 
 post "/createpost" do
-  @title = params[:title]
-
   post = Post.new(
     title: params[:title],
     text_content: params[:content],
@@ -73,6 +71,8 @@ end
 
 get "/sessionposts" do
   @title = session[:post][:title]
+  @content = session[:post][:text_content]
+  @posts = Post.where(user_id: session[:user][:id])
   erb :logged_user_posts
 end
 
