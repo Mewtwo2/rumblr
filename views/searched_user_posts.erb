@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="logged_user_posts.css"/>
+  </head>
+  <body id="screen">
+    <div id="post-grid">
+      <% if @posts.length >= 20 %>
+        <% counter = @posts.length - 1 %>
+        <% 20.times do %>
+          <div class="grid-cell">
+            <h2><%= @posts[counter][:title] %></h2><hr/>
+            <p><%= @posts[counter][:text_content] %></p>
+          </div>
+          <% counter -= 1 %>
+        <% end %>
+      <% else %>
+          <% @posts.each do |post|%>
+            <div class="grid-cell">
+              <h2><%= post[:title] %></h2><hr/>
+              <p><%= post[:text_content] %></p>
+            </div>
+          <% end %>
+      <% end %>
+    </div>
+  </body>
+</html>

@@ -3,14 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link rel="stylesheet" type="text/css" href="account.css"/>
   </head>
   <body>
     <% if session[:user] != nil %>
-      <h1><%= session[:user][:first_name] + " " + session[:user][:last_name] %></h1>
+      <img src="groot.png"/>
+      <h1>Name: <%= session[:user][:first_name] + " " + session[:user][:last_name] %></h1>
+      <h2>Birthday: <%= session[:user][:birthday] %></h2>
+      <h2>Email: <%= session[:user][:email] %></h2>
       <a href="/createpost">Create Post</a>
       <a href="/logout">Logout</a>
     <% else %>
-      <h1><%= "Please Log In" %></h1>
+      <h1><%= "Please Log In or Sign Up" %></h1>
     <% end %>
   </body>
 </html>

@@ -6,6 +6,10 @@
     <link rel="stylesheet" type="text/css" href="home.css"/>
   </head>
   <body id="screen">
+    <form action="/searcheduserposts" method="GET">
+    <input type="search" name="email" placeholder="Search Posts by Email"/>
+    </form>
+
     <h1>Rumblr</h1>
 
     <div id="home_text">
@@ -22,6 +26,7 @@
     <% else %>
     <div id="account_buttons">
       <a href="/account">My Account</a>
+      <a href="/createpost">Create Post</a>
     </div>
     <% end %>
   </body>

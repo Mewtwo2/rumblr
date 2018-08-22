@@ -10,6 +10,10 @@ get "/" do
   erb :home
 end
 
+post "/" do
+
+end
+
 get "/account" do
   erb :account
 end
@@ -74,6 +78,12 @@ get "/sessionposts" do
   @content = session[:post][:text_content]
   @posts = Post.where(user_id: session[:user][:id])
   erb :logged_user_posts
+end
+
+get "/searcheduserposts" do
+  @user = User.find_by(email: params[:email])[:id]
+  @posts = Post.where(user_id: @user)
+  erb :searched_user_posts
 end
 
 require "./models"
