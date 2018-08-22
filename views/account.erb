@@ -5,16 +5,20 @@
     <title></title>
     <link rel="stylesheet" type="text/css" href="account.css"/>
   </head>
-  <body>
     <% if session[:user] != nil %>
+      <body id="screen">
       <img src="groot.png"/>
-      <h1>Name: <%= session[:user][:first_name] + " " + session[:user][:last_name] %></h1>
-      <h2>Birthday: <%= session[:user][:birthday] %></h2>
-      <h2>Email: <%= session[:user][:email] %></h2>
-      <a href="/createpost">Create Post</a>
-      <a href="/logout">Logout</a>
+      <h1><%= session[:user][:first_name] + " " + session[:user][:last_name] %></h1>
+      <h2><%= session[:user][:birthday] %></h2>
+      <h2><%= session[:user][:email] %></h2>
+      <div id="action-buttons">
+        <a href="/createpost">Create Post</a>
+        <a href="/logout">Logout</a>
+      </div>
+    </body>
     <% else %>
+      <body>
       <h1><%= "Please Log In or Sign Up" %></h1>
+      </body>
     <% end %>
-  </body>
 </html>

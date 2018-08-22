@@ -1,3 +1,12 @@
-img{
-  width:17%;
+#screen {
+  background-image: url("https://images.unsplash.com/photo-1524260855046-f743b3cdad07?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bec431d5c80ae862ceba47454d36d9cc&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  text-align: center;
+  color:white;
+}
+
+img {
+  width: 17%;
 }

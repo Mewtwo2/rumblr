@@ -74,8 +74,9 @@ post "/createpost" do
 end
 
 get "/sessionposts" do
-  @title = session[:post][:title]
-  @content = session[:post][:text_content]
+  post = Post.find_by(session[:post])
+  @title = post.title
+  @content = post.text_content
   @posts = Post.where(user_id: session[:user][:id])
   erb :logged_user_posts
 end
