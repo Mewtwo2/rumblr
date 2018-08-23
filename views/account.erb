@@ -11,9 +11,10 @@
       <h1><%= session[:user][:first_name] + " " + session[:user][:last_name] %></h1>
       <h2><%= session[:user][:birthday] %></h2>
       <h2><%= session[:user][:email] %></h2>
-      <div id="action-buttons">
+      <div id="action_buttons">
         <a href="/createpost">Create Post</a>
         <a href="/logout">Logout</a>
+        <a href="/delete">Delete Account</a>
       </div>
     </body>
     <% else %>

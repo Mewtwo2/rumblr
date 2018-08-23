@@ -10,3 +10,16 @@
 img {
   width: 17%;
 }
+
+#action_buttons{
+  text-align: center;
+  padding-top: 2%;
+}
+
+a{
+  background-color: white;
+  color:black;
+  border-radius: 4px;
+  padding: 1.5%;
+  text-decoration: none;
+}
