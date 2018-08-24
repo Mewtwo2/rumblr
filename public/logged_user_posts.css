@@ -7,7 +7,7 @@
 
 #post-grid{
   display: grid;
-  grid-template:40vh 40vh 40vh 40vh 40vh/ 32vw 32vw 32vw;
+  grid-template:40vh 40vh 40vh 40vh 40vh 40vh 40vh/ 32vw 32vw 32vw;
   text-align: center;
   grid-gap:1vw;
   margin-top: 1.5%;
