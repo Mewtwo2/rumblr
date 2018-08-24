@@ -3,8 +3,8 @@ require "sinatra/activerecord"
 enable :sessions
 
 require "active_record"
-# set :database, "sqlite3:rumblr.sqlite3"
-ActiveRecord::Base.establish_connection(ENV["DATABASE_URL"])
+set :database, "sqlite3:rumblr.sqlite3"
+# ActiveRecord::Base.establish_connection(ENV["DATABASE_URL"])
 
 get "/" do
   erb :home
@@ -65,7 +65,7 @@ post "/createpost" do
     user_id: session[:user][:id]
   )
   post.save
-  session[:post] = post
+  # session[:post] = post
   redirect "/sessionposts"
 end
 
